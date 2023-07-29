@@ -1,5 +1,6 @@
 import {useState,useEffect } from "react";
 import axios from "axios";
+import instance from "../api/axios";
 
 const usePlans=()=>{
 
@@ -11,8 +12,8 @@ const usePlans=()=>{
 
     const getPlans = async () => {
         try {
-          const { data, status } = await axios.get(
-            "http://localhost:3000/dashboard/plan"
+          const { data, status } = await instance.get(
+            "/dashboard/plan"
           );
           console.log(data)
           if (status === 200) {
