@@ -1,0 +1,7 @@
+.bg-image{
+    background-image: url('../../assets/img/hero-1.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:94vh;
+}

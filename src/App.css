@@ -1,0 +1,38 @@
+.container-wrapper{
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: 0px auto;
+}
+.heading-underline-animate{
+    transition: all .1s linear;
+    position: relative;
+
+}
+
+.heading-underline-animate::before{
+    /* background: linear-gradient(to right, #f36100 0%,#f36100 100%) no-repeat 0px 100%/0px 100%; */
+
+
+    /* padding-top: 5px; */
+    /* padding-bottom: 2px; */
+    /* border-bottom-right-radius: 10px; */
+    content: "";
+    background-color: #f36100;
+    /* padding-bottom: 1px; */
+    position: absolute;
+    bottom: 0%;
+    height: 2px;
+    padding: 0px;
+    width: 0%;
+    transition: width .3s ease-in-out;
+    
+
+}
+
+.heading-underline-animate:hover::before{
+    /* background-size: 100% 10%; */
+    width: 100%;
+    padding: 1px;
+    
+
+}

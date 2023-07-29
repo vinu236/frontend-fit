@@ -1,0 +1,24 @@
+@media (max-width:1000px) {
+    .section-container{
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width:600px) {
+.section-container{
+    font-size: 20px !important;;
+}
+.section-container span{
+    border-radius: 10% !important;;
+}
+}
+
+@media (max-width:240px) {
+.section-container{
+    font-size: 15px !important;;
+    top:30% !important;
+}
+.section-container span{
+    border-radius: 5% !important;;
+}
+}

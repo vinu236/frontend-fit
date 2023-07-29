@@ -1,0 +1,19 @@
+.hero-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+.logo{
+    font-size: 25px;    
+    letter-spacing: 3px;
+    color:  #f36100;
+    font-weight: 400;
+}
+.hamburger-icon{
+    display: none;
+}
+header{
+    /* background-color: #f36100 !important;     */
+    min-width:100% !important;
+   
+}

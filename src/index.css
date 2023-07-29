@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-in-left {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-left {
+    animation: slide-in-left 0.9s ease-out;
+  }
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-right {
+    animation: slide-in-right 0.9s ease-out;
+  }
+  
+
+  @keyframes custom-animation {
+    0% {
+      transform: translateY(250px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #custom-animation .tab-body-content {
+    animation-name: custom-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+    
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 1px;
+    scrollbar-width: none; /* adjust the width of the scrollbar */
+  }
+  
+  /* color of scrollbar */
+  ::-webkit-scrollbar-track {
+    background-color: darkgrey;
+  }
+
+  .section::-webkit-scrollbar-thumb {
+    background: #8070d4;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-active-tab {
+    background-color: #333;
+    color: #fff;
+  }
+ 
+  

@@ -1,0 +1,36 @@
+@media (min-width:240px) and (max-width:1024px) {
+    
+    ::-webkit-scrollbar {
+        display: none;
+    }
+        .gallery-container{
+            padding: 10px;
+            position: static;
+            overflow-x: scroll;
+        }
+       .gallery-container img{
+        position: static;
+       }
+    
+}
+
+@media (max-width:1024px) {
+    .gallery-container img{
+        width: 250px;
+        height: 250px;
+        padding: 2px;
+    }
+}
+
+@media (max-width:425px) {
+    .gallery-container img{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width:375px) {
+    .gallery-container img{
+        width: 160px;
+        height: 160px;
+    }
+}
