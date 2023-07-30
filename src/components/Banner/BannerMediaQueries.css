@@ -1,0 +1,38 @@
+
+@media (max-width:800px) {
+    .text-container{
+        margin-left:20px;
+    }
+    .banner h1{
+        font-size: 30px;
+       
+    }
+    .banner p{
+        font-size:17px;
+    }
+    .banner img{
+        width: 600px;
+    }
+}
+@media (max-width:600px) {
+    .banner h1{
+        font-size:24px;
+    }
+    .banner p{
+        font-size:14px;
+    }
+}
+
+@media (max-width:400px) {
+    .banner h1{
+        font-size:14px;
+        margin-bottom:10px;
+    }
+    .banner p{
+        font-size:7px;
+        line-height: 1.5;
+    }
+    .banner img{
+        width:500px;
+    }
+}
