@@ -27,7 +27,7 @@ const Chatt=()=>{
   
 
       useEffect(()=>{
-    socket.current=io("https://api.getfitgo.online");
+    socket.current=io("http://localhost:3000/");
     socket.current.on("getMessage",(data)=>{
       setArrivalMessage({
         sender:data.senderId,
@@ -122,13 +122,15 @@ console.log(messages)
            <ChatAside>
            <ChatList className={`text-white p-4 ${active?"bg-[#d5e7f5]":"" }`} >
             
-          {conversation.map((c)=>{
+          {conversation?.map((c)=>{
             return(
                 <ChatListName conversation={c} currentUser={uid} className={`${active?"text-blue-400":"text-black"} flex items-center`} onClick={() => setCurrentUser(c)} />
             )
           })
 
+
           }
+         
            </ChatList>
            </ChatAside>
             <ChatMain messages={messages} currentUser={uid} onChange={handleChange} value={newMessage} onClick={handleSubmit}/>

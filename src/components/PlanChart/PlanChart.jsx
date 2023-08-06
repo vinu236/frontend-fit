@@ -28,7 +28,9 @@ const PlanChart = () => {
         uid,
        features
       };
+      
       console.log(features);
+    
    
       const {data,status} = await instance.post("plan/booking", body,{
         headers:{
@@ -131,7 +133,7 @@ const PlanChart = () => {
       <div className="containr">
         <span className="subheading ">Pricing</span>
       </div>
-      <div className="grid grid-cols-3 gap-4 containr">
+      <div className="grid grid-cols-3 card-container gap-4 containr">
         {renderCard}
 
         {/* <div className={`bg-[#000] py-14 px-10 princing-plan--starter rounded-2xl ${"premium-plan"}`}>

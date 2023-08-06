@@ -34,13 +34,13 @@ const Bookings = () => {
   const handleShowModal = (id) => {
     setShowModal(true);
     //here modal data
-    alert("asdf")
+    
      getBooking(id);
   };
 
   const getBooking=async(id)=>{
     try {
-       alert("asdczdfsf")
+     
       const {data,status}=await instance.get(`/bookingDetail/ ${id}`);
    
      

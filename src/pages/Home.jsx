@@ -5,6 +5,7 @@ import Gallery from "../components/Gallery/Gallery.jsx";
 import Testimonial from "../components/Testimonial/Testimonial.jsx";
 import Features from "../components/Features/Features.jsx";
 import Pricing from "../components/Pricing/Pricing.jsx";
+import Footer from "../components/Footer/Footer.jsx"
 const Home=()=>{
     return(
     <>
@@ -15,6 +16,7 @@ const Home=()=>{
     <Gallery/>
     <Pricing/>
     <Features/>
+    <Footer/>
     </>
     )
 }

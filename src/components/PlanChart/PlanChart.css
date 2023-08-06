@@ -212,3 +212,12 @@ border:2px solid #cf711f;
   
   
 }
+
+
+@media (max-width:1000px) {
+  .card-container{
+    grid-template-columns: repeat(2,300px) !important;
+    gap:140px !important;
+   
+  }
+}
