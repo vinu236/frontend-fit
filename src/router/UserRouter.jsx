@@ -21,11 +21,12 @@ import TrainerProfile from "../pages/TrainerProfile";
 import TrainerLogin from "../pages/TrainerLogin";
 import TrainerChatt from "../components/TrainerChat/TrainerChatt";
 import SignUp from "../components/Signup/Signup";
+import ErrorPage from "../pages/ErrorPage";
 const UserRouter = () => {
   return (
     <>
     <Routes>
-      <Route path="/" element={<UserLayout />}>
+      <Route  element={<UserLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/plan" element={<PlanPage />} />
@@ -34,6 +35,9 @@ const UserRouter = () => {
         <Route path="/trainer/profile" element={<TrainerProfile/>}/>
       </Route>
       <Route path="/otp" element={<Otp />} />
+   
+    {/* <Route path="*" element={<ErrorPage/>} /> */}
+    
     </Routes>
 
     <Routes>
@@ -55,9 +59,10 @@ const UserRouter = () => {
     </Routes>
 
     <Routes>
-   
       <Route path="/trainer/login" element={<><ToastContainer/> <TrainerLogin/></>}/>
     </Routes>
+    
+  
     </>
 
   );

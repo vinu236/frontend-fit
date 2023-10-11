@@ -8,53 +8,34 @@ const Footer = () => {
         </h2>
       </div>
       <div class="content">
-        <div class="services">
-          <h4>Services</h4>
-          <p>
-            <a href="#">App development</a>
-          </p>
-          <p>
-            <a href="#">Web development</a>
-          </p>
-          <p>
-            <a href="#">DevOps</a>
-          </p>
-          <p>
-            <a href="#">Web designing</a>
-          </p>
-        </div>
+        
         <div class="social-media">
           <h4>Social</h4>
           <p>
             <a href="#">
-              <i class="fab fa-linkedin"></i> Linkedin
+              Linkedin
+            </a>
+          </p>
+          <p>
+            <a href="https://github.com/vinu236">
+               Github
             </a>
           </p>
           <p>
             <a href="#">
-              <i class="fab fa-twitter"></i> Twitter
+             Facebook
             </a>
           </p>
           <p>
-            <a href="https://github.com/farazc60">
-              <i class="fab fa-github"></i> Github
-            </a>
-          </p>
-          <p>
-            <a href="https://www.facebook.com/codewithfaraz">
-              <i class="fab fa-facebook"></i> Facebook
-            </a>
-          </p>
-          <p>
-            <a href="https://www.instagram.com/codewithfaraz">
-              <i class="fab fa-instagram"></i> Instagram
+            <a href="https://instagram.com/vinayak._23?igshid=OGQ5ZDc2ODk2ZA==">
+           Instagram
             </a>
           </p>
         </div>
         <div class="links">
           <h4>Quick links</h4>
           <p>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </p>
           <p>
             <a href="#">About</a>
@@ -63,27 +44,26 @@ const Footer = () => {
             <a href="#">Blogs</a>
           </p>
           <p>
-            <a href="#">Contact</a>
+            <a href="/plan">Plans</a>
           </p>
         </div>
         <div class="details">
           <h4 class="address">Address</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur <br />
-            adipisicing elit. Cupiditate, qui!
+            Puthathukuzhiyil House Chengannur
           </p>
           <h4 class="mobile">Mobile</h4>
           <p>
-            <a href="#">+91-12225*****</a>
+            <a href="#">+91 6238777237</a>
           </p>
           <h4 class="mail">Email</h4>
           <p>
-            <a href="#">farazc60@gmail.com</a>
+            <a href="#">ajithvinu23@gmail.com</a>
           </p>
         </div>
       </div>
-      <footer>
-        <hr />© 2022 codewithFaraz.
+      <footer className="pb-3"> 
+        <hr className="bg-custom-gym" /> © 2023 ajithvinu23@gmail.com.
       </footer>
     </div>
   );

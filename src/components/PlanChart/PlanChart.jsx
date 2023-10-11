@@ -6,12 +6,14 @@ import usePlans from "../../Hooks/usePlans";
 import StripeCheckout from "react-stripe-checkout";
 import instance from "../../api/axios";
 import { toast } from "react-toastify";
+import ShimmerCard from "../ShimmerCard/ShimmerCard";
 
 
 
 
 const PlanChart = () => {
   const [plans] = usePlans();
+  console.log("plan is ",plans)
   const [features,setFeatures]=useState({})
   const tokenAuth=localStorage.getItem("traineeToken");
   const navigate=useNavigate()
@@ -133,34 +135,9 @@ const PlanChart = () => {
       <div className="containr">
         <span className="subheading ">Pricing</span>
       </div>
-      <div className="grid grid-cols-3 card-container gap-4 containr">
+      {plans.length === 0 ? <ShimmerCard/> : <div className="grid grid-cols-3 card-container gap-4 containr">
         {renderCard}
-
-        {/* <div className={`bg-[#000] py-14 px-10 princing-plan--starter rounded-2xl ${"premium-plan"}`}>
-          <p className="plan-name text-center ">BASIC PLAN</p>
-          <p className="plan-price text-white text-center">
-            <span>RS</span>2500
-          </p>
-          <ul className="list">{rendereList}</ul>
-          <div className="w-full flex justify-center mt-10">
-            <Link className="p-3 w-35 bg-custom-gym rounded-md hover:bg-orange-600 font-medium active:scale-95">
-              Choose Plan
-            </Link>
-          </div>
-        </div> */}
-        {/* <div className="bg-[#111] py-14 px-10 princing-plan--starter rounded-2xl ">
-          <p className="plan-name text-center ">BASIC PLAN</p>
-          <p className="plan-price text-white text-center">
-            <span>RS</span>2500
-          </p>
-          <ul className="list">{rendereList}</ul>
-          <div className="w-full flex justify-center mt-10">
-            <Link className="p-3 w-35 bg-custom-gym rounded-md hover:bg-orange-600 font-medium active:scale-95">
-              Choose Plan
-            </Link>
-          </div>
-        </div> */}
-      </div>
+      </div>}
     </section>
   );
 };

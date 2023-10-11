@@ -26,15 +26,14 @@ const testimonials = [
 const Testimonial=()=>{
     const[currentIndex,setCurrentIndex]=useState(0);
     const{name,text,image}=testimonials[currentIndex]
-    console.log(name,text,image)
+    console.log(name,text,image)  
 
    useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   }, 10000);
 
-  return () => {
-    clearInterval(interval);
+  return () => {    clearInterval(interval);
   };
 }, []);
 

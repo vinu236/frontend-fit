@@ -68,8 +68,8 @@ const useSignup = () => {
         try {
           if (Object.keys(formErrors).length === 0 && isSubmit) {
             console.log("hey")
-            setLoading("")
-            alert("submitted")
+            setLoading(true)
+          
             const data = await instance.post(
               "/signup",
               formValues
@@ -77,7 +77,7 @@ const useSignup = () => {
             console.log("data");
             console.log(data);
             if(data.status===201){
-              setLoading(false);
+           
               const email=formValues.email
               toast.success(`Otp has sent to ${email}`);
                navigate("/otp",{state:email})
@@ -92,13 +92,13 @@ const useSignup = () => {
               toast.error(message)
               setSubmit(false)
             }else if(error.response.status===500){
-              console.log("Internal Server Error")
               toast.error("Internal Server Error")
               setSubmit(false)
             }
           }
         }finally{
-          console.log("hello finally")
+          setLoading(false);
+          setFormValues(initialValues);
         }
       };
     

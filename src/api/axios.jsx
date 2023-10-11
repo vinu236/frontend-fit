@@ -5,4 +5,4 @@ const instance=axios.create({
     // https://fitnessapp-0ob9.onrender.com
 });
 // / https://api.getfitgo.online
-export default instance;
+export default instance;    

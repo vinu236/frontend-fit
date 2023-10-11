@@ -5,24 +5,26 @@ import InputField from "../InputField/inputField.jsx";
 import "../ModalLogin/LoginPage.css"
 import useSignup from "../../Hooks/useSignup.jsx";
 import ButtonLoader from "../ButtonLoader/ButtonLoader.jsx";
+import { useSelector,useDispatch } from "react-redux";
+import { setSignUpToggle } from "../../Redux/RegisterToggle.jsx";
 const ModalSignUp = () => {
-  const [showModal, setShowModal] = useState(false);
   const{formValues,formErrors,handleChange,handleSubmit,isLoading}=useSignup()
-
+  const dispatch = useDispatch();
+  const SignUpToggle = useSelector(store => store.RegisterToggle.toggle.SignUpToggle);
+  
   const handleShow = () => {
-    setShowModal(true);
+    dispatch(setSignUpToggle(true));
   };
   const handleClose = () => {
-    setShowModal(false);
+    dispatch(setSignUpToggle(false))
   };
-  console.log(showModal);
 
   const modalElement=(
     <Modal onClose={handleClose}>
       <div className="form_container bg-black">
           <h1 className="login_heading text-custom-gym">SignUp</h1>
           <form className="form" onSubmit={handleSubmit}>
-          {formErrors.username && (
+            {formErrors.username && (
               <p className="text-red-600 mt-2 mb-2">{formErrors.username}</p>
             )}
           <div className="form_email">
@@ -100,7 +102,7 @@ const ModalSignUp = () => {
       >
         SignUp
       </Link>
-      {showModal && modalElement}
+      {SignUpToggle && modalElement}
     </>
   );
 };

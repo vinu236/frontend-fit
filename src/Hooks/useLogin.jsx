@@ -5,6 +5,7 @@ import instance from "../api/axios";
 import { useDispatch } from "react-redux";
 import { setUserId, setToken, setIsBlocked } from "../Redux/userSlice";
 import { setTrainerToken, setTrainerId } from "../Redux/trainerSlice";
+import { setLoginToggle } from "../Redux/RegisterToggle";
 
 const useLogin = (url) => {
   console.log(url);
@@ -69,7 +70,7 @@ const useLogin = (url) => {
           toast.error("Your Are Blocked By The Admin--Contact Admin")
           setSubmit(false);
         }
-        console.log(status);
+  
 
         // code to execute if the condition is true
         if (status == 200 && data.traineeToken && data.uid) {
@@ -78,6 +79,7 @@ const useLogin = (url) => {
           dispatch(setToken(data.traineeToken));
           dispatch(setUserId(data.uid));
           dispatch(setIsBlocked(data.isBlocked));
+          dispatch(setLoginToggle(false));
           toast.success("Logged in Successfully");
           navigate("/");
         }
@@ -108,7 +110,8 @@ const useLogin = (url) => {
         }
       }
     } finally{
-      setLoading(false)
+      setLoading(false);
+      setFormValues(initialValues);
     }
   };
 

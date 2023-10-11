@@ -5,21 +5,23 @@ import InputField from "../InputField/inputField.jsx";
 import "./LoginPage.css"
 import useLogin from "../../Hooks/useLogin.jsx";
 import ButtonLoader from "../ButtonLoader/ButtonLoader.jsx";
+import { useDispatch, useSelector } from "react-redux";
+import { setLoginToggle } from "../../Redux/RegisterToggle.jsx";
 const ModalLogin = () => {
   const traineeUrl="/login"
-  const [showModal, setShowModal] = useState(false);
-  const{formErrors,formValues,handleChange,handleSubmit,isLoading}=useLogin(traineeUrl)
+  const{formErrors,formValues,handleChange,handleSubmit,isLoading}=useLogin(traineeUrl);
+  const dispatch = useDispatch()
+  const LoginToggle = useSelector(store => store.RegisterToggle.toggle.loginToggle);
+
+  console.log("loginToggle",LoginToggle)
 
   const handleShow = () => {
-    setShowModal(true);
+    dispatch(setLoginToggle(true))
   };
   const handleClose = () => {
-    setShowModal(false);
+    dispatch(setLoginToggle(false))
+    
   };
-  console.log(showModal);
-  useEffect(()=>{
-    setShowModal(false)
-  },[])
 
   const modalElement=(
     <Modal onClose={handleClose}>
@@ -74,7 +76,7 @@ const ModalLogin = () => {
       >
         Login
       </Link>
-      {showModal && modalElement}
+      {LoginToggle && modalElement}
     </>
   );
 };

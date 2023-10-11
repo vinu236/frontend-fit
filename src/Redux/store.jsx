@@ -3,6 +3,7 @@ import userSlice from "./userSlice";
 import trainerSlice from "./trainerSlice";
 import bmiSlice from "./bmiSlice";
 import planActiveSlice from "./planActiveSlice";
+import RegisterToggleSlice from "./RegisterToggle";
 
 //configuring store=> and store contains slices
 
@@ -11,7 +12,8 @@ const store = configureStore({
     user: userSlice, // add userSlice to Redux store
     trainer: trainerSlice,
     bmi:bmiSlice,
-   plan: planActiveSlice
+   plan: planActiveSlice,
+   RegisterToggle:RegisterToggleSlice
   },
 });
 
