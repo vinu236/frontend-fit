@@ -16,7 +16,7 @@ const Trainee = () => {
     }
 
     try {
-      alert("ASFD")
+    
       const { data } = await instance.patch(
         `/${user._id}`,
         { isActive: !erthytrhyuser.isActive }

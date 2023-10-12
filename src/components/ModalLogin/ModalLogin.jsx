@@ -11,9 +11,9 @@ const ModalLogin = () => {
   const traineeUrl="/login"
   const{formErrors,formValues,handleChange,handleSubmit,isLoading}=useLogin(traineeUrl);
   const dispatch = useDispatch()
+
   const LoginToggle = useSelector(store => store.RegisterToggle.toggle.loginToggle);
 
-  console.log("loginToggle",LoginToggle)
 
   const handleShow = () => {
     dispatch(setLoginToggle(true))

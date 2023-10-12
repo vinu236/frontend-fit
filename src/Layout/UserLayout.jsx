@@ -8,6 +8,7 @@ import { setToken,setUserId } from '../Redux/userSlice';
 import{setTrainerToken,setTrainerId} from "../Redux/trainerSlice"
 
 const UserLayout = () => {
+  
   const userToken=localStorage.getItem("traineeToken");
 const userId=localStorage.getItem("uid");
 const trainerToken=localStorage.getItem("trainerToken");

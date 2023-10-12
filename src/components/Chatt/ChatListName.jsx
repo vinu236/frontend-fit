@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import instance from "../../api/axios";
 
 const ChatListName = ({name,className,conversation,currentUser,onClick}) => {
-alert("DS")
+
   const[trainer,setTrainer]=useState({});
 
   useEffect(() => {

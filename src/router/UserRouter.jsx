@@ -26,7 +26,7 @@ const UserRouter = () => {
   return (
     <>
     <Routes>
-      <Route  element={<UserLayout />}>
+      <Route path="/"  element={<UserLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/plan" element={<PlanPage />} />

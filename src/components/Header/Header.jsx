@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ModalLogin from "../ModalLogin/ModalLogin";
 import ModalSignUp from "../ModalSignup/ModalSignUp";
+import { useSelector } from "react-redux";
 
 
 const Header = () => {
@@ -18,6 +19,11 @@ const handleClick=()=>{
 const handleClose=()=>{
   sectActive('')
 }
+ const auth = useSelector(store=>store.user);
+
+
+
+
   return (
     <header className={`bg-black py-7 px-2 flex justify-around  gap-44 items-center header ${active}`}>
       <Link to={'/'} className=" logo">
@@ -39,7 +45,7 @@ const handleClose=()=>{
           </li>
         </ul>
         
-        {localStorage.getItem("traineeToken") ? (
+        {localStorage.getItem("traineeToken") || auth.Ttoken ? (
         <Link to={"/user/profile"}>
           <FaUserAlt className="text-white mr-6 h-5 cursor-pointer" />
         </Link>
@@ -56,7 +62,8 @@ const handleClose=()=>{
           </li>
         </ul>)
 }
-        <span className="close-icon hidden"><CgClose size={41} className="text-white" onClick={handleClose}/></span>
+        <span className="close-icon hidden"><CgClose size={41} className="text-white" onClick={handleClose}/>fff
+        </span>
       </nav>
       <div className="bg-effect hidden" onClick={handleClose}></div>
       {/* <BiUser className="text-white text-xl" /> */}
